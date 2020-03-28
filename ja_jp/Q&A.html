@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>For developers · GitBook</title>
+        <title>Q&A · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="privacy-policy.html" />
     
-    <link rel="prev" href="../ja_jp/privacy-policy.html" />
+    
+    <link rel="prev" href="user-manual.html" />
     
 
     </head>
@@ -288,9 +290,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../ja_jp/user-manual.html">
+        <li class="chapter " data-level="1.5.1" data-path="user-manual.html">
             
-                <a href="../ja_jp/user-manual.html">
+                <a href="user-manual.html">
             
                     
                     ユーザーマニュアル
@@ -301,9 +303,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../ja_jp/Q&A.html">
+        <li class="chapter active" data-level="1.5.2" data-path="Q&A.html">
             
-                <a href="../ja_jp/Q&A.html">
+                <a href="Q&A.html">
             
                     
                     Q&A
@@ -314,9 +316,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../ja_jp/privacy-policy.html">
+        <li class="chapter " data-level="1.5.3" data-path="privacy-policy.html">
             
-                <a href="../ja_jp/privacy-policy.html">
+                <a href="privacy-policy.html">
             
                     
                     個人情報保護方針
@@ -332,9 +334,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="manual.html">
+        <li class="chapter " data-level="1.6" data-path="../develop/manual.html">
             
-                <a href="manual.html">
+                <a href="../develop/manual.html">
             
                     
                     For developers
@@ -375,7 +377,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >For developers</a>
+        <a href=".." >Q&A</a>
     </h1>
 </div>
 
@@ -390,37 +392,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="development-manual">Development Manual</h1>
-<p><strong>This document is intended for developers to compile with source code. For content that is not understood in the documentation or if you encounter an error, be sure to use Google Search.</strong></p>
-<hr>
-<h2 id="how-is-the-telegram-sms-git-workflow-structured">How is the Telegram SMS git workflow structured?</h2>
-<p>git allows tons of flexibility in the workflow of how people work together, so it is important to clearly define the workflow of this community so that people know what to expect. The git workflow the Telegram SMS app uses is relatively simple and based on the very common workflow established by github.com, gitlab.com and others like it. Here&#x2019;s a break down of what that means:</p>
-<ul>
-<li>all development work happens in the <code>nightly</code> branch</li>
-<li>code is submitted for inclusion via Merge Requests (MRs)</li>
-<li>The master branch must not be merged with any branch that has not been tested on the actual machine</li>
-<li>Merge Requests for a stable release branch can include commits from master</li>
-<li>The compilation package provided to the public can be compiled using the github pipeline.</li>
-</ul>
-<h2 id="how-to-compile-the-project">How to compile the project</h2>
-<h4 id="1-download-the-latest-source-code">1. download the latest source code</h4>
-<pre><code>git clone https://github.com/telegram-sms/telegram-sms.git telegram-sms
-cd telegram-sms
-git checkout nightly
-</code></pre><h4 id="2-configure-the-compilation-environment">2. configure the compilation environment</h4>
-<p>You can compile this project by referring to the compiled script shown in <a href="https://github.com/telegram-sms/telegram-sms/blob/master/.github/workflows/android.yml" target="_blank">android.yml</a></p>
-<p>Configure environment variables, be careful to modify <code>ANDROID_HOME</code> for your <code>Android SDK</code> directory</p>
-<pre><code>export ANDROID_HOME=&lt;Android SDK&gt;
-export KEYSTORE_PASSWORD=&lt;Your password&gt;
-export ALIAS_PASSWORD=&lt;Your password&gt;
-export ALIAS_NAME=&lt;Your alias name&gt;
-export VERSION_CODE=1
-export VERSION_NAME=&quot;Debug&quot;
-</code></pre><h4 id="3-run-compile">3. run compile</h4>
-<pre><code>./gradlew assembleDebug
-</code></pre><p>Or use the following command to generate the <code>release</code> version</p>
-<pre><code>./gradlew assembleRelease
-</code></pre>
+                                <h1 id="qa">Q&amp;A</h1>
+
                                 
                                 </section>
                             
@@ -447,10 +420,14 @@ export VERSION_NAME=&quot;Debug&quot;
 
             
                 
-                <a href="../ja_jp/privacy-policy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 個人情報保護方針">
+                <a href="user-manual.html" class="navigation navigation-prev " aria-label="Previous page: ユーザーマニュアル">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="privacy-policy.html" class="navigation navigation-next " aria-label="Next page: 個人情報保護方針">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -459,7 +436,7 @@ export VERSION_NAME=&quot;Debug&quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"For developers","level":"1.6","depth":1,"previous":{"title":"個人情報保護方針","level":"1.5.3","depth":2,"path":"ja_jp/privacy-policy.md","ref":"ja_jp/privacy-policy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"develop/manual.md","mtime":"2020-03-27T14:29:00.490Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-27T15:25:02.498Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Q&A","level":"1.5.2","depth":2,"next":{"title":"個人情報保護方針","level":"1.5.3","depth":2,"path":"ja_jp/privacy-policy.md","ref":"ja_jp/privacy-policy.md","articles":[]},"previous":{"title":"ユーザーマニュアル","level":"1.5.1","depth":2,"path":"ja_jp/user-manual.md","ref":"ja_jp/user-manual.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ja_jp/Q&A.md","mtime":"2020-03-27T16:07:02.626Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-28T08:44:43.566Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
